@@ -1,0 +1,60 @@
+#wrapper {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#ball {
+    background-color: #000000;
+    width: 300px;
+    height: 300px;
+    vertical-align: middle;
+    margin: 0 auto;
+    border-radius: 50%;
+    /* background: radial-gradient(#999999, #000000); */
+    /* z-index: -1; */
+}
+
+#ball2 {
+    border: solid rgb(215, 215, 215) 5px;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    margin: 0 0 0 13%;
+}
+
+/* #ball3 {
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    vertical-align: middle;
+    margin: 0 auto;
+    border-radius: 50%;
+} */
+
+img {
+    z-index: 0;
+}
+
+#answers {
+    padding-top: 50px;
+    z-index: 1;
+}
+
+.fade-in {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1.5s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
