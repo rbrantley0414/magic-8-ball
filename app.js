@@ -21,8 +21,19 @@ const answers = [
     "Very doubtful"
 ]
 
+const ball = document.getElementById("ball");
 const element = document.getElementById("answers");
 element.style.opacity = 0;
+
+function shake(){
+    ball.classList.add("shake");
+    //Add animation event listener, show new images and scores once animation stops
+    ball.addEventListener('animationend', (ev) => {
+       getAnswer();
+       ball.classList.remove("shake");
+    })
+    
+}
 
 function getAnswer() {
 
@@ -36,4 +47,6 @@ function getAnswer() {
     }, 1500).onfinish = () => element.style = 1
     document.getElementById("answers").innerHTML = `<img src="images/answer${rndInt}.png" alt="answer">`;
 }
+
+
 

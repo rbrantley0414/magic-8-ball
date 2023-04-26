@@ -1,3 +1,10 @@
+body{
+    background-image: url(images/space.gif);
+    background-size: cover;
+    font-family: 'Unbounded', cursive;
+    color: white;
+}
+
 #wrapper {
     width: 80%;
     text-align: center;
@@ -11,8 +18,13 @@
     vertical-align: middle;
     margin: 0 auto;
     border-radius: 50%;
-    /* background: radial-gradient(#999999, #000000); */
-    /* z-index: -1; */
+    box-shadow: 0px 0px 20px #fff;
+}
+
+.shake{
+    animation-name: shake;
+    animation-duration: 0.5s;
+    animation-iteration-count: 3; 
 }
 
 #ball2 {
@@ -56,5 +68,19 @@ img {
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0% {
+        translate: 0px 0px;
+    }
+
+    50% {
+        translate: 20px -20px;
+    }
+
+    100% {
+        translate: 0px 0px;
     }
 }
